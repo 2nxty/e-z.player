@@ -1,12 +1,17 @@
-const words = ["HFTERX9D", "UI3587Z1", "94MKA7BN", "100"];
 const link = "https://e-z.stream/?error=404"
 const link1 = "https://watch.brplayer.site/watch?v="
+const link2 = "https://fviplions.com/v/"
 const param = window.location.search;
 const urlpa = new URLSearchParams(param); 
 if (urlpa.has('w')) {
     const usr = urlpa.get('w');
     document.title = "E-Z - " + usr;
     document.getElementById("ifm").src = link1 + usr;
+}
+else if (urlpa.has('f')) {
+    const usr = urlpa.get('f');
+    document.title = "E-Z - " + usr;
+    document.getElementById("ifm").src = link2 + usr;
 }
 else{
     window.location.replace(link);
